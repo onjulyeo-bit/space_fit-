@@ -92,12 +92,12 @@ const CONFIG = {
       kind: "style",
       title: "끌리는 색감은?",
       options: [
-        { id: "Q2-1", label: "무채색·그레이",   image: "assets/images/q2-gray.svg",     scores: { MOD: 3, MIN: 1, NAT: 0, SCA: 0, CLA: 0, MCL: 1 } },
-        { id: "Q2-2", label: "아이보리·베이지", image: "assets/images/q2-ivory.svg",    scores: { MOD: 1, MIN: 3, NAT: 1, SCA: 1, CLA: 0, MCL: 1 } },
-        { id: "Q2-3", label: "우드·그린",       image: "assets/images/q2-woodgreen.svg", scores: { MOD: 0, MIN: 0, NAT: 3, SCA: 1, CLA: 0, MCL: 0 } },
-        { id: "Q2-4", label: "화이트·파스텔",   image: "assets/images/q2-pastel.svg",   scores: { MOD: 0, MIN: 1, NAT: 1, SCA: 3, CLA: 0, MCL: 0 } },
-        { id: "Q2-5", label: "딥브라운·골드",   image: "assets/images/q2-brown.svg",    scores: { MOD: 0, MIN: 0, NAT: 0, SCA: 0, CLA: 3, MCL: 1 } },
-        { id: "Q2-6", label: "뉴트럴+포인트",   image: "assets/images/q2-neutral.svg",  scores: { MOD: 1, MIN: 1, NAT: 0, SCA: 0, CLA: 1, MCL: 3 } },
+        { id: "Q2-1", label: "무채색·그레이",   image: "",     scores: { MOD: 3, MIN: 1, NAT: 0, SCA: 0, CLA: 0, MCL: 1 } },
+        { id: "Q2-2", label: "아이보리·베이지", image: "",    scores: { MOD: 1, MIN: 3, NAT: 1, SCA: 1, CLA: 0, MCL: 1 } },
+        { id: "Q2-3", label: "우드·그린",       image: "", scores: { MOD: 0, MIN: 0, NAT: 3, SCA: 1, CLA: 0, MCL: 0 } },
+        { id: "Q2-4", label: "화이트·파스텔",   image: "",   scores: { MOD: 0, MIN: 1, NAT: 1, SCA: 3, CLA: 0, MCL: 0 } },
+        { id: "Q2-5", label: "딥브라운·골드",   image: "",    scores: { MOD: 0, MIN: 0, NAT: 0, SCA: 0, CLA: 3, MCL: 1 } },
+        { id: "Q2-6", label: "뉴트럴+포인트",   image: "",  scores: { MOD: 1, MIN: 1, NAT: 0, SCA: 0, CLA: 1, MCL: 3 } },
       ],
     },
 
