@@ -121,13 +121,18 @@
     el.prev.textContent = (state.index === 0) ? "그만두기" : "이전";
   }
 
+  var advanceTimer = null;
   function onSelect(q, optId) {
     state.answers[q.id] = optId;
     renderQuestion();
+    // 선택하면 강조를 잠깐 보여준 뒤 자동으로 다음으로 (모바일에서 '다음' 버튼을 못 찾는 문제 해결)
+    if (advanceTimer) clearTimeout(advanceTimer);
+    advanceTimer = setTimeout(function () { advanceTimer = null; goNext(); }, 350);
   }
 
   /* ---- 내비게이션 ---- */
   function goNext() {
+    if (advanceTimer) { clearTimeout(advanceTimer); advanceTimer = null; }
     var q = questions[state.index];
     if (!state.answers[q.id]) return; // 미선택 방어
     if (state.index < questions.length - 1) {
@@ -138,6 +143,7 @@
     }
   }
   function goPrev() {
+    if (advanceTimer) { clearTimeout(advanceTimer); advanceTimer = null; }
     if (state.index === 0) { showScreen("landing"); return; }
     state.index--;
     renderQuestion();
