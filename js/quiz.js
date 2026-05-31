@@ -96,14 +96,18 @@
       if (q.type === "image") {
         var media = document.createElement("span");
         media.className = "choice-card__media";
-        var img = document.createElement("img");
-        img.src = opt.image;
-        img.alt = opt.label;
-        img.addEventListener("error", function () {
-          img.style.display = "none";
-          media.classList.add("is-empty");
-        });
-        media.appendChild(img);
+        if (opt.image) {
+          var img = document.createElement("img");
+          img.src = opt.image;
+          img.alt = opt.label;
+          img.addEventListener("error", function () {
+            img.style.display = "none";
+            media.classList.add("is-empty");
+          });
+          media.appendChild(img);
+        } else {
+          media.classList.add("is-empty"); // 이미지 경로가 비면 '이미지 준비중' 표시
+        }
         card.appendChild(media);
       }
 
